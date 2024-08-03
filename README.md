@@ -134,14 +134,14 @@ version:  '3.8' services:   server: build: . env_file: - .env ports: -  "8080:80
 ## Nginx and SSL Configuration
 
 1.  Install Nginx and Certbot:
-  ```  
+```
 sudo  apt update sudo  apt  install nginx certbot python3-certbot-nginx -y
 ```    
 
 2.  Create Nginx configuration:
-	  ```  
-		sudo  nano /etc/nginx/sites-available/your-domain.com
-	```   
+```
+sudo  nano /etc/nginx/sites-available/your-domain.com
+```	 
 
    Add the following configuration:
 ```
@@ -199,5 +199,5 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTYyNjE0NDAsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbMjA0MDM1MjA0MCwtMjYyNzA4NTUwXX0=
 -->
