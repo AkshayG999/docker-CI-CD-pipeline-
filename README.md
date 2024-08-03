@@ -151,10 +151,12 @@ server  {   listen  80; server_name your-domain.com www.your-domain.com; locatio
    ``` 
     sudo  ln -s /etc/nginx/sites-available/your-domain.com /etc/nginx/sites-enabled/
   ```  
+		  
+###
 4.  Test and reload Nginx:
     ```
-    `sudo nginx -t sudo systemctl reload nginx
-    ```
+  sudo nginx -t sudo systemctl reload nginx`
+   ``` 
 5.  Obtain SSL certificate:
    
     `sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
@@ -190,5 +192,5 @@ server  {   listen  80; server_name your-domain.com www.your-domain.com; locatio
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDA5MDIwMTUsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbMTE0OTQ5MTM0NiwtMjYyNzA4NTUwXX0=
 -->
