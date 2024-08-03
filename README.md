@@ -119,19 +119,14 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 1.  Create a `Dockerfile` in your project root:
     
-    dockerfile
-    
-    Copy
-    
-    `FROM node:20-alpine ENV NODE_ENV production WORKDIR /usr/src/app RUN npm install -g pm2 COPY package*.json ./ RUN npm ci --only=production COPY . . EXPOSE 8080 CMD ["pm2-runtime", "start", "server.js"]`
+```   
+FROM node:20-alpine ENV NODE_ENV production WORKDIR /usr/src/app RUN npm install -g pm2 COPY package*.json ./ RUN npm ci --only=production COPY . . EXPOSE 8080 CMD ["pm2-runtime", "start", "server.js"]
+```
     
 2.  Create a `docker-compose.yml` file in your project root:
-    
-    yaml
-    
-    Copy
-    
-    `version:  '3.8' services:   server: build: . env_file: - .env ports: -  "8080:8080" command:  ["pm2-runtime",  "start",  "server.js"]`
+
+```   
+version:  '3.8' services:   server: build: . env_file: - .env ports: -  "8080:8080" command:  ["pm2-runtime",  "start",  "server.js"]
     
 3.  Push your code to the main branch of your GitHub repository.
 4.  GitHub Actions will automatically build, push, and deploy your application to the EC2 instance.
@@ -197,5 +192,5 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NzAzMTAzMywtMjYyNzA4NTUwXX0=
+eyJoaXN0b3J5IjpbMTU2MzQzMDk3NCwtMjYyNzA4NTUwXX0=
 -->
