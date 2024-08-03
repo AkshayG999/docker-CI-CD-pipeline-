@@ -127,20 +127,21 @@ FROM node:20-alpine ENV NODE_ENV production WORKDIR /usr/src/app RUN npm install
 
 ```   
 version:  '3.8' services:   server: build: . env_file: - .env ports: -  "8080:8080" command:  ["pm2-runtime",  "start",  "server.js"]
-    
+```    
 3.  Push your code to the main branch of your GitHub repository.
 4.  GitHub Actions will automatically build, push, and deploy your application to the EC2 instance.
 
 ## Nginx and SSL Configuration
 
 1.  Install Nginx and Certbot:
-    
-    `sudo  apt update sudo  apt  install nginx certbot python3-certbot-nginx -y`
-    
+  ```  
+sudo  apt update sudo  apt  install nginx certbot python3-certbot-nginx -y
+```    
+
 2.  Create Nginx configuration:
-    
-    `sudo  nano /etc/nginx/sites-available/your-domain.com`
-    
+  ```  
+sudo  nano /etc/nginx/sites-available/your-domain.com
+```    
     Add the following configuration:
     
     nginx
@@ -192,5 +193,5 @@ version:  '3.8' services:   server: build: . env_file: - .env ports: -  "8080:80
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MzQzMDk3NCwtMjYyNzA4NTUwXX0=
+eyJoaXN0b3J5IjpbNzc4NjQzNzIsLTI2MjcwODU1MF19
 -->
