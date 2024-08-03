@@ -138,8 +138,8 @@ version:  '3.8' services:   server: build: . env_file: - .env ports: -  "8080:80
 sudo  apt update sudo  apt  install nginx certbot python3-certbot-nginx -y
 ```    
 
-2.  Create Nginx configuration:
-```
+.  Create Nginx configuration:
+```bash
 sudo  nano /etc/nginx/sites-available/your-domain.com
  ```
 
@@ -190,5 +190,5 @@ server  {   listen  80; server_name your-domain.com www.your-domain.com; locatio
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA3OTcwODk1LC0yNjI3MDg1NTBdfQ==
+eyJoaXN0b3J5IjpbLTQwMjY5NDUxOSwtMjYyNzA4NTUwXX0=
 -->
