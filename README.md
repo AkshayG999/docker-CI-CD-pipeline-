@@ -35,7 +35,7 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 1.  Update package repository and install Docker:
        
-    `sudo  apt-get update sudo  apt-get  install -y docker.io`
+     ```bash sudo  apt-get update sudo  apt-get  install -y docker.io
     
 2.  Start Docker and enable it to start on boot:
 
@@ -156,5 +156,5 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbMjA1NDE4MDg3NiwtMjYyNzA4NTUwXX0=
 -->
