@@ -36,22 +36,23 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 1.  Update package repository and install Docker:
        
      ```bash
-    sudo  apt-get update sudo  apt-get  install -y docker.io  ##
+    sudo  apt-get update sudo  apt-get  install -y docker.io
+  ###
 2.  Start Docker and enable it to start on boot:
 	  ```bash
 	  sudo systemctl start docker sudo systemctl enable  docker
     
 3.  Add the ubuntu user to the docker group:
-    
-    `sudo  usermod -aG docker ubuntu`
-    
+    ```bash
+    sudo  usermod -aG docker ubuntu
+  ###    
 4.  Reboot the instance:
-  
-       `sudo  reboot`
-    
+	  ```bash
+    sudo  reboot
+  ###    
 5.  After reboot, reconnect and verify Docker access:
-     
-    `docker --version docker  ps`
+     ```bash
+    docker --version docker  ps`
     
 
 ## GitHub Actions Setup
@@ -156,5 +157,5 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg5MDkyOTIsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbMTQ5MzI4NDg5MywtMjYyNzA4NTUwXX0=
 -->
