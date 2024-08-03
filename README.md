@@ -186,18 +186,18 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
     ```
 -   Check Nginx logs:
      ```
-    `sudo  tail -n 20 /var/log/nginx/error.log`
+    sudo  tail -n 20 /var/log/nginx/error.log
     ```
 -   Ensure firewall allows necessary ports:
    ```   
-    `sudo ufw status sudo ufw allow 'Nginx Full'`
+    sudo ufw status sudo ufw allow 'Nginx Full'
    ``` 
 -   Check SSH server status:
     ``` 
-    `sudo systemctl status ssh sudo  netstat -tuln |  grep :22`
+    sudo systemctl status ssh sudo  netstat -tuln |  grep :22
     ```
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5OTE3MjQwLC0yNjI3MDg1NTBdfQ==
+eyJoaXN0b3J5IjpbLTExNTYyNjE0NDAsLTI2MjcwODU1MF19
 -->
