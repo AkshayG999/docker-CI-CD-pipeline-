@@ -160,9 +160,11 @@ sudo nginx -t sudo systemctl reload nginx
 
 
 5.  Obtain SSL certificate:
-   ```
-    `sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
-    ```
+ ```
+sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
+```
+
+
 6.  Verify SSL configuration by visiting `https://your-domain.com`
 
 ## Troubleshooting
@@ -194,5 +196,5 @@ sudo nginx -t sudo systemctl reload nginx
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzk5MzkzNDQsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbLTE2NDcxMjMwODIsLTI2MjcwODU1MF19
 -->
