@@ -256,7 +256,9 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
     ```
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
+
+DocLink:	https://docs.google.com/document/d/1D-z0M5JgN_UlpjBLO87xnxTHL2OF-cYWCXF97lUm9Js/edit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYzMDk3Nzc3LDIxMDcyMjc3NjEsMzExMz
-QzNjY0LC0yNjI3MDg1NTBdfQ==
+eyJoaXN0b3J5IjpbLTg0NDI0MjY0OSwzNjMwOTc3NzcsMjEwNz
+IyNzc2MSwzMTEzNDM2NjQsLTI2MjcwODU1MF19
 -->
