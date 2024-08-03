@@ -65,22 +65,18 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 2.  Create a workflow file named `main.yml` in the `.github/workflows` directory:
 
-	2. Create a workflow file (e.g., `main.yml`) in the workflows directory:
 ```
-2. Create a workflow file (e.g., `main.yml`) in the workflows directory:
-
-```yaml
-name: CI/CD Pipeline
-on:
-  push:
-    branches:
-      - main
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+	name: CI/CD Pipeline
+	on:
+	  push:
+	    branches:
+	      - main
+	jobs:
+	  build:
+	    runs-on: ubuntu-latest
+	    steps:
+	      - name: Checkout code
+	        uses: actions/checkout@v2
       
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -202,6 +198,6 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MzgyODMxMCwzMTEzNDM2NjQsLTI2Mj
+eyJoaXN0b3J5IjpbMjEwNzIyNzc2MSwzMTEzNDM2NjQsLTI2Mj
 cwODU1MF19
 -->
