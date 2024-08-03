@@ -170,13 +170,14 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
 ## Troubleshooting
 
 -   Docker permission issues:
-    
-    `sudo  groupadd  docker sudo  usermod -aG docker ubuntu sudo systemctl restart docker`
-    
+    ```
+    sudo  groupadd  docker sudo  usermod -aG docker ubuntu sudo systemctl restart docker
+	 ```   
+
 -   View container logs:
-    
-    `docker logs <container-id>`
-    
+    ```
+    docker logs <container-id>
+  ```  
 -   Inspect container status:
     
     `docker inspect <container-id>`
@@ -196,5 +197,5 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDcxMjMwODIsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbMjAzOTI2MDU1NiwtMjYyNzA4NTUwXX0=
 -->
