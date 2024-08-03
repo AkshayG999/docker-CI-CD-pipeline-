@@ -62,11 +62,9 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
     mkdir -p .github/workflows
   ###    
 2.  Create a workflow file named `main.yml` in the `.github/workflows` directory:
-    
-	```bash
+ ```bash   
 	2. Create a workflow file (e.g., `main.yml`) in the workflows directory:
 
-```yaml
 name: CI/CD Pipeline
 on:
   push:
@@ -198,5 +196,5 @@ jobs:
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI3NjI0ODU1LC0yNjI3MDg1NTBdfQ==
+eyJoaXN0b3J5IjpbLTEwOTc0MTkxNjYsLTI2MjcwODU1MF19
 -->
