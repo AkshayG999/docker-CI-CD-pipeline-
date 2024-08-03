@@ -142,12 +142,11 @@ sudo  apt update sudo  apt  install nginx certbot python3-certbot-nginx -y
 ```
 sudo  nano /etc/nginx/sites-available/your-domain.com
  ```
-    Add the following configuration:
+
+   Add the following configuration:
+
     
-    nginx
-    
-    Copy
-    
+ 
     `server  {   listen  80; server_name your-domain.com www.your-domain.com; location /  { proxy_pass http://localhost:8080; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; } }`
     
 3.  Enable the configuration:
@@ -193,5 +192,5 @@ sudo  nano /etc/nginx/sites-available/your-domain.com
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDYxNzg0MCwtMjYyNzA4NTUwXX0=
+eyJoaXN0b3J5IjpbMjE3MjE2NDM3LC0yNjI3MDg1NTBdfQ==
 -->
