@@ -139,9 +139,9 @@ sudo  apt update sudo  apt  install nginx certbot python3-certbot-nginx -y
 ```    
 
 2.  Create Nginx configuration:
-  ```  
+```
 sudo  nano /etc/nginx/sites-available/your-domain.com
-```    
+ ```
     Add the following configuration:
     
     nginx
@@ -193,5 +193,5 @@ sudo  nano /etc/nginx/sites-available/your-domain.com
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc4NjQzNzIsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbMTI1NDYxNzg0MCwtMjYyNzA4NTUwXX0=
 -->
