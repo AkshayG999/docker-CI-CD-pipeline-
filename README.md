@@ -67,46 +67,7 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 
 	2. Create a workflow file (e.g., `main.yml`) in the workflows directory:
 ```
-		name: CI/CD Pipeline
-		on:
-		  push:
-		    branches:
-		      - main
-		jobs:
-		  build:
-		    runs-on: ubuntu-latest
-		    steps:
-		      - name: Checkout code
-		        uses: actions/checkout@v2
-		      
-		      - name: Set up Node.js
-		        uses: actions/setup-node@v2
-		        with:
-		          node-version: '20'
-		      
-		      - name: Install dependencies
-		        run: npm install
-		      
-		      - name: Build Docker image
-		        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/best_bus_backend:latest .
-		      
-		      - name: Log in to DockerHub
-		        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-		      
-		      - name: Push Docker image to DockerHub
-		        run: docker push ${{ secrets.DOCKER_USERNAME }}/best_bus_backend:latest
-		      
-		      - name: SSH to EC2 and Deploy
-		        uses: appleboy/ssh-action@master
-		        with:
-		          host: ${{ secrets.EC2_HOST }}
-		          username: ubuntu
-		          key: ${{ secrets.EC2_KEY }}
-		          script: |
-		            docker pull ${{ secrets.DOCKER_USERNAME }}/best_bus_backend:latest
-		            docker stop $(docker ps -a -q) || true
-		            docker rm $(docker ps -a -q) || true
-		            docker run -d -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/best_bus_backend:latest
+
 ```
 
  3.  Add the following secrets to your GitHub repository:
@@ -199,5 +160,5 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MDM1MjA0MCwtMjYyNzA4NTUwXX0=
+eyJoaXN0b3J5IjpbMTM5MjExMDYwNiwtMjYyNzA4NTUwXX0=
 -->
