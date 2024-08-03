@@ -133,13 +133,9 @@ WORKDIR  /usr/src/app
 RUN  npm  install  -g  pm2
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
-
 RUN  --mount=type=bind,source=package.json,target=package.json  \
-
 --mount=type=bind,source=package-lock.json,target=package-lock.json  \
-
 --mount=type=cache,target=/root/.npm  \
-
 npm  ci  --omit=dev
 
 # Run the application as a non-root user.
@@ -251,6 +247,6 @@ sudo certbot --nginx -d your-domain.com -d www.your-domain.com`
 
 Remember to replace placeholders like `your-domain.com` with your actual domain name and adjust any paths or configurations to match your specific project structure.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4OTg3MzQ2MywyMTA3MjI3NzYxLDMxMT
-M0MzY2NCwtMjYyNzA4NTUwXX0=
+eyJoaXN0b3J5IjpbNzM3NzcwNjMzLDIxMDcyMjc3NjEsMzExMz
+QzNjY0LC0yNjI3MDg1NTBdfQ==
 -->
