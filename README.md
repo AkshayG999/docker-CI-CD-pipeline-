@@ -76,12 +76,13 @@ This guide provides a comprehensive, step-by-step process to set up a CI/CD pipe
 	    runs-on: ubuntu-latest
 	    steps:
 	      - name: Checkout code
-	        uses: actions/checkout@v2
+	        uses: actions/checkout@v4
       
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          check-latest: true
       
       - name: Install dependencies
         run: npm install
@@ -259,6 +260,7 @@ Remember to replace placeholders like `your-domain.com` with your actual domain 
 
 DocLink:	https://docs.google.com/document/d/1D-z0M5JgN_UlpjBLO87xnxTHL2OF-cYWCXF97lUm9Js/edit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NDI0MjY0OSwzNjMwOTc3NzcsMjEwNz
-IyNzc2MSwzMTEzNDM2NjQsLTI2MjcwODU1MF19
+eyJoaXN0b3J5IjpbNzQ2MTcwMzkzLC04NDQyNDI2NDksMzYzMD
+k3Nzc3LDIxMDcyMjc3NjEsMzExMzQzNjY0LC0yNjI3MDg1NTBd
+fQ==
 -->
